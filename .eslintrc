@@ -1,0 +1,17 @@
+{
+	"extends": "eslint:recommended",
+	"env": {
+		"node": true,
+		"es6": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 2019
+	},
+	"rules": {
+		"no-trailing-spaces": ["error"],
+		"no-var": "error",
+		"prefer-const": "error",
+		"quotes": ["error", "single"],
+		"semi": ["error", "always"]
+	}
+}
