@@ -26,12 +26,14 @@ client.on('message', async (msg) => {
 
   // const command = msg.content.slice(`<@!${BOT_ID}>`.length);
   const command = msg.content.replace(`<@!${BOT_ID}>`,'').trim();
+  console.log(`User ${msg.author.username} said ${command}`);
 
   // const args = msg.content.slice(`<@!${BOT_ID}>`.length).trim().split(' ');
 	// const command = args.shift().toLowerCase();
   // console.log(command, args, msg.content);
 
   const response = adventureGame.go(msg.author.id, command);
+  console.log('Replying: ', response);
   msg.channel.send(`${msg.author}: ${response}`);
 });
 
